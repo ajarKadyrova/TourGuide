@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_logo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/picture_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/nameOfPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_below="@id/picture_place"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:paddingLeft="25dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="10dp"
+            android:textSize="18sp"
+            tools:text="Name of the place" />
+
+        <Button
+            android:id="@+id/arrowBtn"
+            android:clickable="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/picture_place"
+            android:background="@drawable/arrow_down_icon"
+            android:paddingTop="8dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/info_icon"
+                style="@style/ImageViewStyle"
+                android:paddingTop="20dp"
+                android:src="@drawable/info_24" />
+
+            <TextView
+                android:id="@+id/placeInformation"
+                style="@style/textViewStyle"
+                android:layout_toRightOf="@id/info_icon"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                tools:text="Information about the place" />
+
+            <TextView
+                android:id="@+id/cuisines"
+                android:layout_below="@id/placeInformation"
+                android:layout_toRightOf="@id/info_icon"
+                style="@style/textViewStyle"
+                tools:text="Cuisines" />
+
+            <TextView
+                android:id="@+id/workingTime"
+                android:layout_below="@id/cuisines"
+                android:layout_toRightOf="@id/info_icon"
+                style="@style/textViewStyle"
+                tools:text="Working hours" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <ImageView
+                android:id="@+id/address_icon"
+                style="@style/ImageViewStyle"
+                android:src="@drawable/location_icon" />
+
+            <TextView
+                android:id="@+id/placeAddress"
+                style="@style/textViewStyle"
+                tools:text="Location"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/phone_icon"
+                style="@style/ImageViewStyle"
+                android:src="@drawable/phone_icon" />
+
+            <TextView
+                android:id="@+id/phoneNumber_textView"
+                style="@style/textViewStyle"
+                android:clickable="true"
+                tools:text="Phone number" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
