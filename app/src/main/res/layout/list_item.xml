@@ -15,7 +15,6 @@
             android:id="@+id/picture_place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
             tools:src="@mipmap/ic_launcher" />
 
         <TextView
